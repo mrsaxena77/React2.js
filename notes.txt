@@ -1,0 +1,46 @@
+Making of "TO DO APP".
+
+Requirements: App div , input tag , button tag , tasks on UI , remove tasks by clicking on cross button (which is visible at the end of every task.).
+
+
+#> Create a HTML page , put a div tag in bode with id="root".
+#> Add all three cdn links of react, reactDOM, babel respectively in three individual script tags.
+#> Create a separate App.jsx file link it in HTML in script tag.
+
+
+---------------------------------------------------------------------------------------------------------------
+
+class Input extends React.Component {
+
+    state = {
+        tasks: ""
+    };
+
+    render () {
+        return (
+            <div>
+                <input type= {this.state.tasks}></input>
+                <button>Submit</button>
+            </div>
+        );
+    }
+
+}
+export default Input;
+
+
+#> In above code we created a class component for input and submit button because as we know that a component can contain multiple of HTML elements.
+
+#> We used state to store data of input. And stored tasks in State with empty string.
+
+#> Calling render function and then we return a div which has UI of Input tag and button.
+ 
+#> At last line in above code the whole component exported and at the first line of App.jsx imports the Input component. This export import only works for front-end development.
+
+---------------------------------------------------------------------------------------------------------------
+
+
+#> The babel raising some errors of importing input component, which means the export import concept can not works with babel. So later we will gonna use react installing by NPM not from cdn links.
+
+#> Hence for now, we used our old method of putting the Input.jsx script tag before App.jsx script tag for inheritance. Which means App.jsx takes everything from Input.jsx
+
